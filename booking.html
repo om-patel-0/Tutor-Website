@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Session</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="booking.css"> <!-- Link to your modernized CSS -->
+</head>
+<body>
+    <section id="booking-form">
+        <h1>Book a Session</h1>
+
+        <!-- Updated form to use Formspree -->
+        <form action="https://formspree.io/f/mqazjrkk" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+
+            <label for="topic">What is the main topic that this session can help resolve?</label>
+            <textarea id="topic" name="message" placeholder="Describe the issue or topic..." required></textarea>
+
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+</body>
+</html>
+
+
+

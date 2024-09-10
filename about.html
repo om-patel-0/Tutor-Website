@@ -1,0 +1,49 @@
+<!-- about.html: The About Me and Calendar Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Om Patel's Tutoring Service - About Me</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css"> <!-- Link to your main CSS file -->
+</head>
+<body>
+
+    <!-- Content Container (About Me + Calendar) -->
+    <div class="content-container">
+        <!-- About Me Section -->
+        <section id="about-me">
+            <h1>About Me</h1>
+            <img src="your-photo.jpg" alt="Your Photo" class="profile-pic">
+            <p>Hello! I'm Om Patel, a senior Computer Science student at the University of Georgia. I have a passion for helping students master challenging concepts and develop their technical skills. My areas of expertise include:</p>
+            <ul>
+                <li>Software Development</li>
+                <li>Web Programming</li>
+                <li>Data Structures</li>
+                <li>Theory of Computing</li>
+            </ul>
+            <p>Whether you're preparing for exams, tackling a difficult project, or learning how to code from scratch, I'm here to help you succeed!</p>
+        </section>
+
+        <!-- Calendar Section -->
+        <section id="calendar">
+            <h2>Book a Session</h2>
+            <div id="calendar-container">
+                <div id="calendar-header">
+                    <button id="prev-month">Previous</button>
+                    <span id="month-year">September 2024</span>
+                    <button id="next-month">Next</button>
+                </div>
+                <div id="days-container"></div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script> <!-- Link to your JavaScript file -->
+</body>
+</html>
+
+
+
+
