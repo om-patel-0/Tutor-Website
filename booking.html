@@ -21,7 +21,15 @@
 
             <label for="topic">What is the main topic that this session can help resolve?</label>
             <textarea id="topic" name="message" placeholder="Describe the issue or topic..." required></textarea>
-
+            <label for="time">Please select a time:</label>
+            <select id="time" name="time" required>
+                <option value="">Select a time</option> <!-- Default empty option -->
+                <option value="18:00">6:00 PM</option>
+                <option value="18:30">6:30 PM</option>
+                <option value="19:00">7:00 PM</option>
+                <option value="19:30">7:30 PM</option>
+                <option value="20:00">8:00 PM</option>
+            </select>
             <input type="submit" value="Submit">
         </form>
     </section>
