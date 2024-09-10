@@ -44,16 +44,85 @@ body {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
 }
 
+/* Modern Profile Picture Styling */
 .profile-pic {
     width: 150px;
-    border-radius: 50%;
-    margin-bottom: 20px;
-    border: 4px solid #4e73df;
-    transition: border-color 0.3s ease;
+    height: 150px;
+    border-radius: 50%; /* Circular shape */
+    border: 4px solid #4e73df; /* Blue border for a modern look */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+    object-fit: cover; /* Ensures the image fits inside the circle without stretching */
+    display: block; /* To ensure proper alignment */
+    margin: 0 auto 20px auto; /* Center horizontally and add spacing below */
 }
 
+/* Hover effect */
 .profile-pic:hover {
-    border-color: #3a57b3;
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4); /* Slightly bigger shadow on hover */
+}
+
+/* Container for the image and the flip effect */
+.flip-container {
+    perspective: 1000px; /* This defines how far the 3D space extends. Higher values = more subtle effect */
+    width: 150px;
+    height: 150px;
+    margin: 0 auto; /* Center the flip-container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Flip effect */
+.flip-card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d; /* Allows the flip to happen in 3D */
+    transition: transform 0.6s; /* Smooth transition for the flip */
+}
+
+.flipped {
+    transform: rotateY(180deg); /* Flips the card */
+}
+
+/* Front and back of the image */
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hides the back face when not flipped */
+    border-radius: 50%; /* Keeps it circular */
+    overflow: hidden;
+}
+
+/* Front of the card (the image) */
+.flip-card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Back of the card (for any content you'd like) */
+.flip-card-back {
+    background-color: #4e73df; /* Example of a back color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 16px;
+    transform: rotateY(180deg); /* Initially flipped */
+}
+
+/* Hover effect remains the same */
+.flip-card-front img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4); /* Slightly bigger shadow on hover */
 }
 
 #about-me ul {
@@ -179,6 +248,4 @@ button:hover {
         max-width: 100%;
     }
 }
-
-
 
