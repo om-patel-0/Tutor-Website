@@ -77,3 +77,4 @@ document.addEventListener('DOMContentLoaded', function () {
         flipCard.classList.toggle('flipped');
     });
 });
+
